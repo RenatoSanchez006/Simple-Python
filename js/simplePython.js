@@ -7,5 +7,4 @@ $('.item').click(function () {
 	$(this).addClass('active');
 });
 
-// Cambios de Renato 
-//cambio de Marce
+//final change
