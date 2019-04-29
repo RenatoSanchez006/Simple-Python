@@ -1,3 +1,15 @@
 .body {
 	
 }
+
+.center-title {
+	text-align: center;
+}
+
+.top-margin {
+	margin-top: 50px;
+}
+
+.bottom-margin {
+	margin-bottom: 100px;
+}
