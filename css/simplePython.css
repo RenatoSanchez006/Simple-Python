@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .home-box {
 	margin: 20px;
 	padding: 20px;
@@ -19,3 +20,20 @@
   display: block;
   min-height: 50px;
 } */
+=======
+.body {
+	
+}
+
+.center-title {
+	text-align: center;
+}
+
+.top-margin {
+	margin-top: 50px;
+}
+
+.bottom-margin {
+	margin-bottom: 100px;
+}
+>>>>>>> ee0b7693e85e7ce94e0d8374c16a964d2498bd8d
