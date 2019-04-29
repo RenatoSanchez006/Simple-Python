@@ -7,6 +7,4 @@ $('.item').click(function () {
 	$(this).addClass('active');
 });
 
-// Cambios de Renato 
-//cambio para upload branch
-//cambios de RenatoBranch
+//final change
