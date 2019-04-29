@@ -10,32 +10,39 @@
 </head>
 
 <body>
-	<!-- revisar overlapping de sidebar -->
-	<!-- Menu -->
-	<div class="ui left thin visible sidebar vertical menu">
-		<div class="item">
-			<img class="ui small image" src="./img/spLogo.png">
-		</div>
-		<a class="item active">Home</a>
-		<a class="item">Log in</a>
-		<a class="item">Learn</a>
-		<a class="item">Practice</a>
-		<a class="item">Dashboard</a>
-		<!-- need to insert space here -->
-		<a class="item">About Python</a>
-		<a class="item">About Us</a>
-	</div>
-	<div class="pusher">
-
-		<!-- Home page -->
-		<div class="ui container">
-			<h1 class="ui header">
-				Simple Python
-			</h1>
-			<!-- Site purpose -->
-			<div class="ui centered">
-				<p>The purpose of this site is to...</p>
+	<div class="ui grid sp-sidebar">
+		<!-- MENU -->
+		<div class="three wide column">
+			<div class="ui fluid vertical menu">
+				<div class="item">
+					<img class="ui mini image" src="./img/logo.png">
+				</div>
+				<a class="item active">Home</a>
+				<a class="item">Learn</a>
+				<a class="item">Practice</a>
+				<a class="item">Dashboard</a>
+				<a class="item">About Python</a>
+				<a class="item">About Us</a>
 			</div>
+		</div>
+
+		<div class="thirteen wide column">
+			<div class="ui text container home-box">
+				<h1 class="ui dividing centered header">
+					Simple Python
+				</h1>
+				<!-- Site purpose and benefits-->
+				<p>The purpose of this site is to...</p>
+				<p>Once you have an account, we'll keep track of your practicing score to see how well
+					you've done and your improvement.</p>
+				<!-- Log in or sign up -->
+				<div class="ui large buttons">
+					<button class="ui button">Log in</button>
+					<div class="or"></div>
+					<button class="ui button">Sign up</button>
+				</div>
+			</div>
+
 			<!-- Benefits -->
 			<div class="ui">
 				<p>Once you have an account, we'll keep track of your score to see how well
@@ -142,47 +149,35 @@
 
 		<!-- Practice page -->
 		<div class="ui container">
-			<h1 class="ui header">
-				How much do you know?
-			</h1>
-		</div>
-
-		<!-- Dashboard page -->
-		<div class="ui container">
-			<h1 class="ui header">
-				Welcome nameOfPerson!
-			</h1>
-		  	<!-- User image -->
-		  	<div class="ui">
-			  	<img class="ui small centered image" src="https://lorempixel.com/400/400">
-				<button class="ui centered button">Edit</button>
+			<div class="sixteen wide column">
+				<div class="ui text container home-box">
+					<h1 class="ui dividing centered header">
+						How much do you know?
+					</h1>
+				</div>
+				<div class="ui two column stackable grid">
+					<div class="ten wide column">
+						<div class="ui fluid image">
+							<a class="ui right corner label">
+								<i class="lightbulb icon"></i>
+							</a>
+							<img class="ui big bordered rounded image" src="./img/exercises/e01.png">
+						</div>
+					</div>
+					<div class="six wide column centered">
+						<div class="ui small action input">
+							<input type="text" placeholder="Answer...">
+							<button class="ui button">Submit</button>
+						</div>
+					</div>
+				</div>
 			</div>
-		  	<!-- <div class="ui instant move reveal">
-		  	  	<div class="visible content">
-		  	    	<img src="https://lorempixel.com/400/400" alt="User Photo" class="ui small image">
-		  	  	</div>
-		  	  	<div class="hidden content">
-		  	    	<button class="ui button">Edit</button>
-		  	  	</div>
-		  	</div> -->
 		</div>
 
-		<!-- About python page -->
-		<div class="ui container">
-			<h1 class="ui header">
-				Python
-			</h1>
-		</div>
 
-		<!-- About us page -->
-		<div class="ui container">
-			<h1 class="ui header">
-				Developers
-			</h1>
-		</div>
+
+
 	</div>
-
-
 
 
 	<script type="text/javascript" src="./js/simplePython.js"></script>
