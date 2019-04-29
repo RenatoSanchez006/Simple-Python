@@ -1,10 +1,10 @@
-$('.ui.sidebar').sidebar('toggle');
+// $('.ui.sidebar').sidebar('toggle');
 
-$('.menu .item').tab();
+// $('.menu .item').tab();
 
-$('.item').click(function () {
-	$('.active').removeClass('active');
-	$(this).addClass('active');
-});
+// $('.item').click(function () {
+// 	$('.active').removeClass('active');
+// 	$(this).addClass('active');
+// });
 
-//final change
+// //final change
