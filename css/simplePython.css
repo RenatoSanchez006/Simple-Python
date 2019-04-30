@@ -31,3 +31,24 @@
 .bottom-margin {
 	margin-bottom: 100px;
 }
+
+.ui.button.logo-lightColor, .ui.segment.logo-lightColor {
+  background-color: #BBFE9B;
+}
+
+.ui.button.logo-darkColor, .ui.fluid.large.teal.submit.button.logo-darkColor {
+  background-color: #26AF43;
+}
+
+
+.ls-grid {
+  height: 100%;
+}
+
+.img-ls {
+  margin-top: -100px;
+}
+
+.column.ls-col {
+  max-width: 450px;
+}
