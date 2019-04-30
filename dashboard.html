@@ -14,10 +14,28 @@
   	</h1>
     <div class="ui segment"
     	<div class="ui">
-  	  	<img class="ui small centered image" src="https://lorempixel.com/400/400">
-  		<button class="ui centered button">Edit</button>
+  	  	<img class="ui small centered circular image" src="https://lorempixel.com/400/400">
+  		<button class="ui button">Edit</button>
+      <!-- score bar -->
+      <div class="ui segment">
+        <h2 class="ui header center-title top-margin">
+          Score
+        </h2>
+        <div class="ui large olive indicating progress progress-bar" data-value="1" data-total="10" id="score">
+          <div class="bar"></div>
+          <div class="label">Done correctly</div>
+        </div>
+      </div>
+      <!-- advancement bar -->
+      <div class="ui segment">
+        <h2 class="ui header center-title top-margin">
+          Overall Progress
+        </h2>
+        <div class="ui large green indicating progress progress-bar" data-value="1" data-total="10" id="advancement">
+          <div class="bar"></div>
+          <div class="label">Done questions</div>
+        </div>
+      </div>
   	</div>
-    <!-- score bar -->
-    <!-- advancement bar -->
   </body>
 </html>
