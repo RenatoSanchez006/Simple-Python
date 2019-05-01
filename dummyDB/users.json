@@ -1,0 +1,4 @@
+{"_id":{"$oid":"5cc9d8156afce7b3313bea8c"},"name":"administrator","username":"admin","password":"admin","score":0,"progress":0,"usertype":0,"__v":0}
+{"_id":{"$oid":"5cc9d829128065b33da55bfc"},"name":"Tony Stark","username":"ironman","password":"3000","score":1,"progress":0.25,"usertype":1,"__v":0}
+{"_id":{"$oid":"5cc9e22650d7cfb720397cf3"},"name":"Renato Sanchez","username":"rsanchez","password":"1234","score":0,"progress":0,"usertype":1,"__v":0}
+{"_id":{"$oid":"5cc9ec9f1fd5c2bc7155a966"},"name":"Marcela Garza","username":"mgarza","password":"1234","score":0,"progress":0,"usertype":1,"__v":0}
