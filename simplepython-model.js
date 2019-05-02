@@ -68,7 +68,7 @@ const listPython = {
 			})
 	},
 	getAllExercises: function () {
-		return Exercises.find()
+		return Exercises.find().sort({id: 1})
 			.then(exercises => {
 				return exercises;
 			})
