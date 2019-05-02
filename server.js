@@ -6,9 +6,11 @@ const app = express();
 mongoose.Promise = global.Promise;
 const jsonParser = bodyParser.json();
 
+const{DATABASE_URL, PORT} = require('./config');
+
 app.use(express.static('public'));
 
-app.use('/', jsonParser, simplepythonRouter);
+app.use('/simplePython', jsonParser, simplepythonRouter);
 
 let server;
 
@@ -49,7 +51,10 @@ function closeServer() {
 		});
 }
 
-runServer(8080, 'mongodb://localhost/simplePython')
+runServer(PORT, DATABASE_URL)
 	.catch(err => console.log(err));
 
 module.exports = { app, runServer, closeServer };
+
+// runServer(8080, 'mongodb://localhost/simplePython')
+// 	.catch(err => console.log(err));
