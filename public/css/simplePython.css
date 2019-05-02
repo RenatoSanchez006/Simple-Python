@@ -53,6 +53,10 @@
   max-width: 450px;
 }
 
+.ui.segment.admin-section {
+  background-color: grey;
+}
+
 .learnBox{
 	margin-top: 20px;
 }
