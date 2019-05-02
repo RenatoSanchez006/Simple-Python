@@ -322,7 +322,7 @@ router.delete('/delete-exercise/:id', (req, res, next) => {
 	}
 });
 
-// PUT update exercise - update
+// PUT update/edit exercise - update
 router.put('/update-exercise/:id', (req, res, next) => {
 	let id = req.params.id;
 	let newAnswer = req.body.answer;
