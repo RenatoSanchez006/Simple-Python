@@ -29,7 +29,7 @@ const listPython = {
 			});
 	},
 	getUser: function (user) {
-		return Users.find({ username: user })
+		return Users.findOne({ username: user })
 			.then(user => {
 				return user;
 			})

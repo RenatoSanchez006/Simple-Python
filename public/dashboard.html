@@ -18,29 +18,26 @@
 				<div class="item">
 					<img class="ui small image" src="./img/splogo.png">
 				</div>
-				<a class="item">Dashboard</a>
-				<a class="item">Learn</a>
-				<a class="item">Practice</a>
-				<a class="item">About Us</a>
-				<a class="item">Log out</a>
+				<a class="item active" id="home">Home</a>
+				<a class="item" id="learn">Learn</a>
+				<a class="item" id="practice">Practice</a>
+				<a class="item acive" id="dashboard">Dashboard</a>
+				<a class="item" id="about">About Us</a>
 			</div>
 		</div>
 
 		<div class="thirteen wide column">
 			<div class="learnBox">
-				<h1 class="ui header center-title">
-					Welcome nameOfPersonFromDB!
+				<h1 class="ui dividing centered header" id="namePerson">
 				</h1>
 				<div class="ui segment">
-					<img class="ui small centered circular image" src="https://lorempixel.com/400/400">
-					<button class="ui button">Edit</button>
+					<img class="ui medium centered image" src="./img/avatar.gif">
 					<!-- score bar -->
 					<div class="ui segment">
 						<h2 class="ui header center-title top-margin">
 							Score
 						</h2>
-						<div class="ui large olive indicating progress progress-bar" data-value="1" data-total="10"
-							id="score">
+						<div class="ui large olive indicating progress progress-bar" data-value="1" data-total="10" id="score">
 							<div class="bar"></div>
 							<div class="label">Done correctly</div>
 						</div>
@@ -50,8 +47,7 @@
 						<h2 class="ui header center-title top-margin">
 							Overall Progress
 						</h2>
-						<div class="ui large green indicating progress progress-bar" data-value="1" data-total="10"
-							id="advancement">
+						<div class="ui large green indicating progress progress-bar" data-value="1" data-total="10" id="advancement">
 							<div class="bar"></div>
 							<div class="label">Done questions</div>
 						</div>

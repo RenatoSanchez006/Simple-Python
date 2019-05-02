@@ -1,28 +1,48 @@
-//Progress bars:
-$('.progress-bar')
-  .progress('increment')
-;
+$(function() {
+	let username = "ironman";
+	$.ajax({
+		url: `./user/${username}`,
+		method: "GET",
+		dataType: 'json',
+		success: responseJson => displayName(responseJson.user),
+		error: err => console.log(err)
+	});
+});
 
-$('#score')
-  .progress({
-    text: {
-      active  : 'Done {value} of {total} problems correctly',
-      success : '{total} Problems Done Correctly! '
-    }
-  })
-;
+function displayName(user) {
+	$('#namePerson').append(`Welcome ${user.name}!`);
 
-$('#advancement')
-  .progress({
-    text: {
-      active  : 'Done {value} of {total} total problems',
-      success : '{total} Problems Finished!'
-    }
-  })
-;
-/*
-{percent}	Current percentage
-{value}	Current value
-{total}	Total value
-{left}	Distance to total, or % progress left
-*/
+	let sc = user.score * 25;
+	$('#score').progress({
+	    text: {
+	      active  : `Done ${user.score} of 4 problems correctly`,
+	      success : `All problems done Correctly!`
+	    },
+	    percent: sc
+	})
+
+	let prog = user.progress * 100;
+	$('#advancement').progress({
+	    text: {
+	      active  : `Done ${prog}%`,
+	      success : `All problems done!`
+	    },
+	    percent: prog
+	});
+}
+
+$("#home").click(function(){
+  window.location.href = "./index.html";
+});
+
+$("#learn").click(function(){
+  window.location.href = "./learn.html";
+});
+
+$("#practice").click(function(){
+  window.location.href = "./practice.html";
+});
+
+$("#about").click(function(){
+  window.location.href = "./aboutUs.html";
+});

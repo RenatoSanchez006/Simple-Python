@@ -24,7 +24,7 @@
 	text-align: center;
 }
 
-.top-margin {
+.top-margin, .section{
 	margin-top: 50px;
 }
 
@@ -39,7 +39,6 @@
 .ui.button.logo-darkColor, .ui.fluid.large.teal.submit.button.logo-darkColor {
   background-color: #26AF43;
 }
-
 
 .ls-grid {
   height: 100%;
@@ -57,6 +56,15 @@
   background-color: grey;
 }
 
-.learnBox{
+.learnBox {
 	margin-top: 20px;
 }
+
+.color-text1 {
+  color: green;
+}
+
+.color-text2 {
+  color: olive;
+}
+

@@ -2,10 +2,10 @@
 
 // $('.menu .item').tab();
 
-$('.item').click(function () {
-	$('.active').removeClass('active');
-	$(this).addClass('active');
-});
+// $('.item').click(function () {
+// 	$('.active').removeClass('active');
+// 	$(this).addClass('active');
+// });
 
 $("#loginButton").click(function(){
   window.location.href = "./login.html";
