@@ -23,9 +23,9 @@ $("#practice").click(function(){
   window.location.href = "./practice.html";
 });
 
-$("#dashboard").click(function(){
-  window.location.href = "./dashboard.html";
-});
+// $("#dashboard").click(function(){
+//   window.location.href = "./dashboard.html";
+// });
 
 $("#about").click(function(){
   window.location.href = "./aboutUs.html";

@@ -17,35 +17,41 @@
 		        		Create an account
 		      		</div>
 		    	</h2>
-		    	<form action="" method="get" class="ui large form" id="signup-form">
+		    	<form class="ui large form" id="signup-form">
 		      		<div class="ui stacked secondary segment">
 		        		<div class="two fields">
 		        		  	<div class="field">
-		        		    	<input placeholder="First name" type="text">
+		        		    	<input id="fName" placeholder="First name" type="text">
 		        		  	</div>
 		        		  	<div class="field">
-		        		    	<input placeholder="Last name" type="text">
+		        		    	<input id="lName" placeholder="Last name" type="text">
 		        		  	</div>
 		        		</div>
         				<div class="field">
         		  			<div class="ui left icon input">
         		    			<i class="user icon"></i>
-        		    			<input type="text" name="username" placeholder="Username">
+        		    			<input id="username" type="text" name="username" placeholder="Username">
         		  			</div>
         				</div>
 						<div class="field">
 				  			<div class="ui left icon input">
 				    			<i class="lock icon"></i>
-				    			<input type="password" name="password" placeholder="Password">
+				    			<input id="password" type="password" name="password" placeholder="Password">
 				  			</div>
 						</div>
-		        		<div class="ui fluid large teal submit button logo-darkColor">Sign up</div>
+						<div class="field">
+							<div class="ui left icon input">
+								<i class="lock icon"></i>
+								<input id="passwordC" type="password" name="password" placeholder="Password Confirm">
+							</div>
+						</div>
+						<button id="signupButton" class="ui fluid large teal button">Sign Up</button>
 		      		</div>
-		      		<div class="ui error message"></div>
 				</form>
 		  	</div>
 		</div>
 		<script type="text/javascript" src="./js/signup.js"></script>
+		<script type="text/javascript" src="./js/userHandler.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 	</body>
 </html>

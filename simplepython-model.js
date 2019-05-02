@@ -15,10 +15,48 @@ let exercisesSchema = mongoose.Schema({
 	answer: { type: String, required: true }
 });
 
+let loginSchema = mongoose.Schema({
+	username: { type: String, required: true, unique: true }
+});
+
 let Users = mongoose.model('users', userSchema);
 let Exercises = mongoose.model('exercises', exercisesSchema);
+let Login = mongoose.model('logs', loginSchema);
 
 const listPython = {
+	getUserLogIn: function () {
+		return Login.findOne()
+			.then(user => {
+				if (user) {
+					return user;
+				}
+				throw new Error("User not found");
+			})
+			.catch(err => {
+				throw new Error(err);
+			})
+	},
+	createUserLogin: function (user) {
+		return Login.create({ username: user })
+			.then(user => {
+				return user;
+			})
+			.catch(err => {
+				throw new Error(err);
+			})
+	},
+	deleteUserLogin: function (id) {
+		return Login.findOneAndRemove({ username: id })
+			.then(user => {
+				if (user) {
+					return user;
+				}
+				throw new Error("Exercise not found");
+			})
+			.catch(err => {
+				throw new Error(err);
+			});
+	},
 	getAllUsers: function () {
 		return Users.find()
 			.then(users => {

@@ -3,6 +3,71 @@ const router = express.Router();
 const { listPython } = require('./simplepython-model');
 const uuid = require('uuid/v4');
 
+/* -------------------- listPython - LOGIN -------------------- */
+// GET user loged in
+router.get('/user-login', (req, res, next) => {
+	listPython.getUserLogIn()
+		.then(user => {
+			res.status(200).json({
+				message: 'User found',
+				status: 200,
+				user: user
+			});
+		})
+		.catch(err => {
+			res.status(500).json({
+				message: 'Internal server error',
+				status: 500
+			});
+			next();
+		})
+});
+
+router.post('/user-login/:id', (req, res, next) => {
+	listPython.createUserLogin(req.params.id)
+		.then(user => {
+			res.status(201).json({
+				message: 'User sesion creted',
+				status: 201,
+				user: user
+			});
+		})
+		.catch(err => {
+			console.log(err)
+			res.status(500).json({
+				message: 'Internal server error',
+				status: 500
+			});
+			next();
+		});
+});
+
+router.delete('/user-login/:id', (req, res, next) => {
+	let id = req.params.id;
+	if (id) {
+		listPython.deleteUserLogin(id)
+			.then(user => {
+				res.json({
+					message: 'Succesfully deleted',
+					status: 204,
+					user: user
+				}).status(204)
+			})
+			.catch(err => {
+				res.status(404).json({
+					message: 'User not found',
+					status: 404
+				});
+			})
+	} else {
+		res.status(406).json({
+			message: 'Missing id in parameters',
+			status: 406
+		});
+		next();
+	}
+})
+
 /* -------------------- listPython - USERS -------------------- */
 // GET all users
 router.get('/users', (req, res, next) => {
@@ -280,7 +345,7 @@ router.post('/new-exercise', (req, res, next) => {
 		});
 });
 
-// DELETE user by username
+// DELETE user by exercise id
 router.delete('/delete-exercise/:id', (req, res, next) => {
 
 	if (!('id' in req.body)) {
