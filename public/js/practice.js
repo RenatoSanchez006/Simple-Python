@@ -1,22 +1,35 @@
+let username; 
+
 $(function () {
 	console.log("Hello Practice");
-  let username = "ironman";
+	username = getUser();
+	console.log('username')
+	if (username) {
+		console.log(username);
+	} else {
+		console.log('very false');
+	}
+	getUserInfo(username);
+	getAllExercises();
+});
 
+function getUserInfo(username) {
 	$.ajax({
 		url: `./user/${username}`,
 		method: "GET",
 		dataType: 'json',
+		async: false,
 		success: responseJson => authenticate(responseJson.user),
 		error: err => console.log(err)
 	});
-	getAllExercises();
-});
+}
 
 function getAllExercises() {
 	$.ajax({
 		url: './exercises',
 		method: "GET",
 		dataType: 'json',
+		async: false,
 		success: responseJson => displayExercises(responseJson.exercises),
 		error: err => console.log(err)
 	});
@@ -40,6 +53,7 @@ $('#editButton').click(function (event) {
 		contentType: 'application/json',
 		data: JSON.stringify(answerToUpdate),
 		dataType: 'json',
+		async: false,
 		success: responseJson => {
 			console.log(responseJson.exercise);
 		},
@@ -63,6 +77,7 @@ $('#deleteProblem').click(function (event) {
 		contentType: 'application/json',
 		data: JSON.stringify(exerciseToDelete),
 		dataType: 'json',
+		async: false,
 		success: responseJson => {
 			console.log(responseJson.exercise);
 			getAllExercises();
@@ -73,7 +88,7 @@ $('#deleteProblem').click(function (event) {
 	$('#deleteId').val('');
 });
 
-function displayExercises (exercises) {
+function displayExercises(exercises) {
 	console.log(exercises);
 	$('.listOfExercises').empty();
 	exercises.forEach(element => {
@@ -105,23 +120,29 @@ function displayExercises (exercises) {
 
 
 function authenticate(user) {
-	if( user.usertype != 0){
-		$('.admin-section').hide();
+	if (user.usertype == 0) {
+		$('.admin-section').show();
 	}
 }
 
-$("#home").click(function(){
-  window.location.href = "./index.html";
+$("#practice").click(function () {
+	window.location.href = "./practice.html";
 });
 
-$("#learn").click(function(){
-  window.location.href = "./learn.html";
+$("#learn").click(function () {
+	window.location.href = "./learn.html";
 });
 
-$("#dashboard").click(function(){
-  window.location.href = "./dashboard.html";
+$("#dashboard").click(function () {
+	window.location.href = "./dashboard.html";
 });
 
-$("#about").click(function(){
-  window.location.href = "./aboutUs.html";
+$("#about").click(function () {
+	window.location.href = "./aboutUs.html";
+});
+
+$("#logout").click(function () {
+	console.log('im login out ' + username);
+	logout(username);
+	window.location.href = "./index.html";
 });
