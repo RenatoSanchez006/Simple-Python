@@ -10,7 +10,7 @@ const{DATABASE_URL, PORT} = require('./config');
 
 app.use(express.static('public'));
 
-app.use('/simplePython', jsonParser, simplepythonRouter);
+app.use('/', jsonParser, simplepythonRouter);
 
 let server;
 
