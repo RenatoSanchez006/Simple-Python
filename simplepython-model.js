@@ -68,7 +68,7 @@ const listPython = {
 			})
 	},
 	getAllExercises: function () {
-		return Exercises.find().sort({id: 1})
+		return Exercises.find().sort({ id: 1 })
 			.then(exercises => {
 				return exercises;
 			})
@@ -107,9 +107,12 @@ const listPython = {
 			});
 	},
 	updateExercise: function (id, newAnswer) {
-		return Exercises.findOneAndUpdate({ id: id }, { $set: { answer: newAnswer}})
+		return Exercises.findOneAndUpdate({ id: id }, { $set: { answer: newAnswer } })
 			.then(oldData => {
-				return oldData;
+				if (oldData) {
+					return oldData;
+				}
+				throw new Error("Exercise not found");
 			})
 			.catch(err => {
 				throw new Error(err);
